@@ -1,0 +1,14 @@
+Giftbox=list(range(1,1001))
+x1=0
+#counter for freshers  
+for x1 in range(1,1001):
+	x1+=1
+	#
+	for x in range(1,1001):
+		if x % x1==0:
+			if x in Giftbox:
+				Giftbox.remove(x)
+			else:
+				Giftbox.append(x)
+
+print('''Total Number of Boxs Open after All the Freshers played the Game is '''+str(len(Giftbox)))
