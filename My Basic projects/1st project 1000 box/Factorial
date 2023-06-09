@@ -1,1 +1,12 @@
+## Find Factorial for the Given Number - 1
 
+def fact1(n):
+# Checking the number if less than or = 1 return 1
+# other wise return factorial
+    if n<=0:
+        return 1
+    else:
+        return (n * fact1(n - 1))
+# Driver Code
+num1 = int(input('Enter Number for fact1 \n'));
+print("Factorial of number ",num1," is ",fact1(num1))
