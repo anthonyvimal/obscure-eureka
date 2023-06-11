@@ -1,0 +1,9 @@
+def fact():
+    i = 1
+    Result=1
+    F=int(input('\nEnter Number for factorial : '))
+    while i in range(1,F+1):
+        Result*=i
+        i+=1
+    print('Factorial of ',F,' is ',Result)
+fact()

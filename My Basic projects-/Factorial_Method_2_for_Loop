@@ -1,0 +1,8 @@
+def factorial1(n):
+    X=1
+    for x in range(1,n+1):
+        if x>=1:
+            X*=x
+    print('The factorial of ',Value,' is ',X)
+Value=int(input('Enter Value to find Factorial : '))    
+factorial1(Value)

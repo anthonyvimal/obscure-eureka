@@ -1,0 +1,10 @@
+# Factorial by def Re-cursive Method 
+def factorial(n):   
+    if n==0:
+        return 1
+    elif n==1:
+        return 1
+    else:
+        return (n * factorial(n-1))
+Number=int(input('\nEnter Number to find factorial: '))    
+print('The Factorial of',Number,'is        :',factorial(Number))

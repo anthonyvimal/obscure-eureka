@@ -1,0 +1,26 @@
+'''A strange game has been planned for the Fresher's Party :
+There are 1000 gift boxes and 1000 freshers in the party. The seniors ask the person in the first seat to go to every box and open it. Then the person in the second seat is asked to go to every second box and close it. The third one has to go to every third box.If it is closed, he opens it.If it is open,he closes it.The fourth person does this to every fourth gift box and so on.After the thousandth fresher completes the task, how many gift boxes are open?
+A) 64   B) 32   C) 31    D) 62'''
+#Define a list of 1000 Gift Boxes
+r1=0
+r2=1000
+Gift=list(range(r1+1,r2+1))
+#assisgn all boxes were closed at start
+for x in range(r1,r2):
+    Gift[x]=str(Gift[x])+'-Close'
+#increment to for everyone in 1000 freshers
+y=0
+#Loop for 1000 freshers
+for f in range(r1+1,r2):
+    y+=1
+    #condition to open or close the box 
+    for items in range(r1+1,r2):    
+        if (items) % (y)==0:
+            if 'Close' in Gift[items]:
+                Gift[items]=str(Gift[items]).replace('-Close','-Open')
+            else:
+                Gift[items]=str(Gift[items]).replace('-Open','-Close')
+#Counting open boxes              
+subs='Open'
+res = len([i for i in Gift if subs in i])
+print('\n There were '+str(res)+' open Boxes')
